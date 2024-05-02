@@ -1,4 +1,4 @@
-This repository is **DM_Simulator** based implementation of **QC-Application Oriented Benchmarks** framework.
+This repository is **DM_Simulator** based implementation of **QC-Application Oriented Benchmarks** framework. Aim of this repository is to benchmark the performance of algorithms mentioned in the **Application oriented Benchmark Suite** with the QSIM (Simulator) which works on the basis of dm_simulator.
 
 # References :
 
@@ -17,7 +17,7 @@ All the algorithms in the framework are benchmarked in **qiskit**, **cirq**, **b
 
 Instructions for setting up the repository and further information regarding the benchmarks are already provided in &nbsp;&nbsp;&nbsp;&nbsp;[this Repository](https://github.com/SRI-International/QC-App-Oriented-Benchmarks)
 
-# For DM_Simulator :
+# For DM_Simulator (QSIM):
 
 For Using DM_Simulator kindly clone the following repository :
 ```bash
@@ -32,4 +32,57 @@ All the algorithms of Benchmarking Suite are categorized into three types **Tuto
 
 ```text
 The status of every algorithm in each category will be maintained in their corresponding directory.
+```
+
+# Installation Procedure :
+
+1. Create an environment in Anaconda.
+```bash
+conda create -y -n QSIM python=3.8
+```
+
+2. Activate the environment
+```bash
+conda activate QSIM
+```
+(***Optional***) To deactivate the environment run the following command in terminal. 
+```bash
+conda deactivate
+```
+
+3. Clone the repository :
+```bash
+git clone -b terra_upgrade https://github.com/indian-institute-of-science-qc/qiskit-aakash.git
+```
+
+4. Go to the specified hash-id:
+```bash
+cd QSIM
+git checkout -b dmsim bea98fbff86c234c0b1990add17493a1e86917cb
+git log -n1
+```
+
+5. Installation of requirements :
+Install ipython-genutils :
+```bash
+python -m pip install ipython-genutils
+```
+or
+```bash
+conda install -c conda-forge ipython_genutils
+```
+Install rustup :
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+python -m pip install setuptools-rust
+```
+
+Install requirements : If you want to run tests or linting checks, install the developer requirements.
+```bash
+pip install -r requirements-dev.txt
+
+```
+Install Qiskit-Aakash :
+```bash
+pip install .
 ```
