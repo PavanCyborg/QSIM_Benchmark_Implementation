@@ -37,3 +37,9 @@ These values are bounded according to my PC's Hardware capabilities, may vary ac
 |Basis Selector|All possible basis are checked|By default executed on Hardware Agostnic Basis|
 |mcx_shim|Flase|All the average fidelities are above **0.9** (without any noise)|
 ||True| Average fidelity at 2 qubits drops to **0.8** for both Polarization and Hellinger Fidelities (without any noise)|
+
+```text
+Modified the code of Benchmarks that has limitations of max_circuits. 
+Now, you can use max_circuits > 20.
+For our Benchmarking we have tested upto 20
+```
